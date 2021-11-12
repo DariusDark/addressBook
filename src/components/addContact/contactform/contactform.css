@@ -9,28 +9,4 @@
     min-width: 250px;
 }
 
-.input {
-    width: 100%;
-    padding: 5px 10px;
-    background: rgb(51, 51, 51);
-    color: rgb(209, 209, 209);
-    border-radius: 5px;
-    border: 1px solid transparent;
-    transition: border 0.2s ease;
-}
-.input:focus {
-    border-color: rgb(36, 107, 184);
-}
-.input:valid {
-    border-color: rgb(54, 187, 47);
-}
-.input::-webkit-inner-spin-button {
-    appearance: none;
-}
 
-.btn {
-    background: rgb(58, 58, 58);
-    color: rgb(209, 209, 209);
-    padding: 8px 15px;
-    border-radius: 5px;
-}

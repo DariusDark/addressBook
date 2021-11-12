@@ -1,17 +1,19 @@
 .pagination__container {
-    margin: 0px 5px;
+    margin: 0px 7.5px;
 }
 
 .pagination__btn {
     background: transparent;
-    border: 1px solid rgb(182, 182, 182);
+    border: 1px solid rgba(182, 182, 182, 0.576);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     color: rgb(182, 182, 182);
     transition: 0.2s ease;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0), -2px -2px 8px rgba(255,255,255, 0.25);
 }
 
 .pagination__btn.active {
-    border-color: #4ca4f7;
-    color: #54a4f0;
+    border-color: #86bdf1;
+    color: #73b3f0;
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0), inset -2px -2px 8px rgba(255,255,255, 0.25);
 }

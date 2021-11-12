@@ -3,6 +3,7 @@
     flex: 0 0 33.333%;
 }
 .contact__body {
+    border: 1px solid rgb(160, 160, 160);
     cursor: pointer;
     border-radius: 5px;
     background: #3f3f3f;
@@ -12,8 +13,15 @@
     background: #2e2e2e;
     box-shadow: 8px 8px 12px #252525, -8px -8px 12px #373737;
 }
+.contact__body:hover {
+    box-shadow: 8px 8px 12px #252525, 
+    -8px -8px 12px #373737, 
+    inset 8px 8px 12px #3f3f3f, 
+    inset -8px -8px 12px #212121;
+}
 .contact__body:active {
-    box-shadow: inset 8px 8px 12px #252525, inset -8px -8px 12px #373737;
+    border: 1px solid rgb(59, 144, 223);
+    box-shadow: inset 8px 8px 12px #1c1c1c, inset -8px -8px 12px #434343;
 
 }
 .contact__title {

@@ -17,11 +17,11 @@ function Contact() {
             }}>
                 <div className="current-contact__container">
                     <div className="current-contact__label">Name</div>
-                    <input className={contact.isEditActive ? "input current-contact__input active": "input current-contact__input" } type="text" disabled={contact.isEditActive ? '' : 'disabled'} value={contact.name} onInput={(event) => { dispatch(changeValue(EDIT_NAME, event.target.value)); console.log(event.target.value); }} placeholder="Enter new Name" />
+                    <input className={contact.isEditActive ? "input current-contact__input active": "input current-contact__input" } required type="text" disabled={contact.isEditActive ? '' : 'disabled'} value={contact.name} onInput={(event) => { dispatch(changeValue(EDIT_NAME, event.target.value)); console.log(event.target.value); }} placeholder="Enter new Name" />
                 </div>
                 <div className="current-contact__container">
                     <div className="current-contact__label">Phone Number</div>
-                    <input className={contact.isEditActive ? "input current-contact__input active": "input current-contact__input" } type="text" disabled={contact.isEditActive ? '' : 'disabled'} value={contact.phoneNumber} onInput={event => { dispatch(changeValue(EDIT_PHONE, event.target.value)) }} placeholder="Enter new Phone Number" />
+                    <input className={contact.isEditActive ? "input current-contact__input active": "input current-contact__input" } required type="text" disabled={contact.isEditActive ? '' : 'disabled'} value={contact.phoneNumber} onInput={event => { dispatch(changeValue(EDIT_PHONE, event.target.value)) }} placeholder="Enter new Phone Number" />
                 </div>
                 {contact.isEditActive ?
                     <div className="current-contact__btn-container">
