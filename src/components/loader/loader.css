@@ -1,0 +1,28 @@
+.loader {
+    position: relative;
+    height: 100%;
+}
+
+.loader::after {
+    position: absolute;
+    content: '';
+    left: calc(50% - 15px);
+    top: calc(50% - 30px);
+    height: 30px;
+    width: 30px;
+    border: 5px solid #fff;
+    /* border-left-color: transparent; */
+    /* border-right-color: transparent; */
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: 1s rotation linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

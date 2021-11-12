@@ -1,0 +1,55 @@
+.current-contact {
+    position: relative;
+    padding: 20px 40px;
+    min-height: 481px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.current-contact__form {
+    padding-top: 50px;
+}
+
+.current-contact__container {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.current-contact__input {
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.current-contact__input.active {
+    border-color: rgb(40, 163, 61);
+}
+.current-contact__btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+.current-contact__label {
+    margin-bottom: 10px;
+}
+.btn-submit {
+    margin-right: 5px;
+}
+.btn-submit,
+.btn-cancel {
+    width: 100%;
+}
+.btn-back {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+
+.btn-edit, .btn-delete {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+
+.btn-delete {
+    right: 110px;
+}

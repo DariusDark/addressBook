@@ -1,0 +1,43 @@
+.modal-screen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.165);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-screen.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.modal__body {
+    min-width: 400px;
+    background: rgb(44, 44, 44);
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+.modal__title {
+    margin-bottom: 10px;
+}
+.modal__title,
+.modal__phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__label {
+    margin-bottom: 5px;
+}
+.modal__text {
+    font-size: 16px;
+}

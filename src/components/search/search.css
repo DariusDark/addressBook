@@ -1,0 +1,37 @@
+.search {
+    position: relative;
+    padding: 20px 40px;
+    min-height: 481px;
+    height: 100%;
+}
+
+.search-title {
+    color: #b1b1b1;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.search__form {
+    display: flex;
+    justify-content: center;
+    min-width: 150px;
+    max-width: 250px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 10px;
+}
+.input.input__search {
+    padding-right: 40px;
+}
+.btn.btn-search {
+    position: absolute;
+    left: calc(100% + 4px);
+    top:  -1px;
+    padding: 0 8px;
+    padding-top: 3.5px;
+}
+
+.empty-result {
+    width: 100%;
+    text-align: center;
+}
