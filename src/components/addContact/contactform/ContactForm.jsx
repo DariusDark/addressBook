@@ -17,16 +17,28 @@ function ContactForm() {
             }}
         >
             <div className="input__container">
-                <input className="input input__name" required value={edit.name} onInput={(event) => {
-                    const contactName = event.target.value;
-                    dispatch(editEmpty(INPUT_NAME, contactName));
-                }} type="text" placeholder="Enter Contact Name" />
+                <input
+                    className="input input__name"
+                    required
+                    value={edit.name}
+                    onInput={(event) => {
+                        const contactName = event.target.value;
+                        dispatch(editEmpty(INPUT_NAME, contactName));
+                    }}
+                    type="text"
+                    placeholder="Enter Contact Name"
+                />
             </div>
             <div className="input__container">
-                <input className="input input__phone" required value={edit.phoneNumber} onInput={(event) => {
-                    const contactPhone = event.target.value;
-                    dispatch(editEmpty(INPUT_PHONE, contactPhone))
-                }} type="number" placeholder="Enter Contact phone number" />
+                <input
+                    className="input input__phone"
+                    required
+                    value={edit.phoneNumber}
+                    onInput={(event) => {
+                        const contactPhone = event.target.value;
+                        dispatch(editEmpty(INPUT_PHONE, contactPhone))
+                    }} type="number" placeholder="Enter Contact phone number"
+                />
             </div>
             <div className="button__container">
                 <button className="btn btn-submit" type="submit">Add User</button>

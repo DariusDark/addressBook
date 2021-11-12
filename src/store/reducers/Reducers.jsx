@@ -97,7 +97,8 @@ const searchValue = (state, value) => {
 }
 
 const deleteContact = (state, id) => {
-    const { contacts, perPage, currentPage, currentElems, currentContact } = state;
+    const { contacts, perPage, currentElems, currentContact } = state;
+    let { currentPage } = state;
     let newContacts = [];
     for (let i = 0; i < contacts.length; i++) {
         if (contacts[i].uniqueId !== id) {
@@ -106,11 +107,18 @@ const deleteContact = (state, id) => {
     }
     currentElems.splice(id, 1);
     let { pages, calculatedElems } = calculateElems(newContacts.length, perPage, currentPage, currentElems, newContacts);
+    if (!calculatedElems.length) {
+        currentPage--;
+        let start = (currentPage - 1) * perPage,
+            end = start + perPage;
+        calculatedElems = newContacts.slice(start, end);
+    }
     return {
         ...state,
         contacts: [...newContacts],
         currentElems: [...calculatedElems],
         totalPages: [...pages],
+        currentPage: currentPage,
         currentContact: {
             ...currentContact,
             isEditActive: false
@@ -204,6 +212,7 @@ const toContact = (state, id) => {
 
 const addContact = (state) => {
     let { edit, contacts, perPage, currentElems, currentPage } = state;
+    currentPage = 1;
     const newContact = {
         ...edit,
         uniqueId: uniqueId++
@@ -215,7 +224,8 @@ const addContact = (state) => {
         contacts: [...contacts],
         edit: empty,
         currentElems: [...calculatedElems],
-        totalPages: [...pages]
+        totalPages: [...pages],
+        currentPage: currentPage
     }
 }
 
@@ -271,14 +281,12 @@ const calculateElems = (totalElems, perPage, currentPage, currentElems, contacts
 const changePage = (state, currentPage) => {
     let { perPage, contacts, currentElems } = state;
 
-    const start = --currentPage * perPage;
-    const end = start + perPage;
-
-    currentElems = contacts.slice(start, end);
+    let { pages, calculatedElems } = calculateElems(contacts.length, perPage, currentPage, currentElems, contacts)
     return {
         ...state,
-        currentElems: [...currentElems],
-        currentPage: ++currentPage
+        currentElems: [...calculatedElems],
+        currentPage: currentPage,
+        totalPages: [...pages]
     }
 }
 

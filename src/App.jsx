@@ -7,7 +7,7 @@ import Home from './components/home/Home';
 import Sidebar from './components/sidebar/Sidebar';
 import Search from './components/search/Search';
 import AddContact from './components/addContact/AddContact';
-import Contact from './components/contact/Contact';
+import CurrentContact from './components/currentcontact/CurrentContact';
 
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ function App() {
         <div className="main-content active">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path={`/user/${params}`} component={Contact} />
+            <Route exact path={`/user/${params}`} component={CurrentContact} />
             <Route path="/search" component={Search} />
             <Route path="/addUser" component={AddContact} />
             <Redirect to="/" />
