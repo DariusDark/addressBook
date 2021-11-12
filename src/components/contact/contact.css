@@ -46,7 +46,11 @@
 .btn-cancel {
     width: 100%;
 }
+.btn-cancel:hover, .btn-back:hover, .btn-edit:hover {
+    border-color: rgb(34, 94, 150);
+}
 .btn-cancel:active, .btn-back:active, .btn-edit:active {
+    box-shadow: 0px 0px 10px rgb(34, 94, 150);
     border-color: rgb(34, 94, 150);
 }
 .btn-back {
@@ -64,7 +68,10 @@
 .btn-delete {
     right: 110px;
 }
-
+.btn-delete:hover {
+    border-color: rgb(180, 42, 42);
+}
 .btn-delete:active {
     border-color: rgb(180, 42, 42);
+    box-shadow: 0 0 10px rgb(180, 42, 42);
 }

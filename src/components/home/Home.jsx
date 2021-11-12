@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import './home.css';
 import Contact from './contact/Contact';
 import PaginationBtn from './paginationBtn/PaginationBtn';

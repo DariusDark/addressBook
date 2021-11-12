@@ -3,7 +3,6 @@ import { Link, useHistory } from 'react-router-dom';
 import { HomeOutline } from 'react-ionicons';
 import { SearchOutline } from 'react-ionicons';
 import { PersonAddOutline } from 'react-ionicons';
-import styled from 'styled-components';
 import './sidebar.css';
 
 function Sidebar() {

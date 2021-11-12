@@ -42,9 +42,13 @@
     padding: 8px 15px;
     border-radius: 5px;
     border: 1px solid rgb(114, 114, 114);
+    transition: 0.2s ease;
 }
-
+.btn:hover {
+    border-color: rgb(51, 163, 51);
+}
 .btn:active {
+    box-shadow: 0 0 10px rgb(51, 163, 51);
     border-color: rgb(51, 163, 51);
 }
 

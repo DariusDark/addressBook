@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Redirect, useParams, useLocation } from 'react-router-dom';
+import {  Switch, Route, Redirect } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContacts, setFetch } from './store/actions/Actions';

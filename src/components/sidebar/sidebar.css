@@ -34,8 +34,8 @@
 .sidebar__option:hover {
     box-shadow: -4px -4px 10px #80808050,
                 4px 4px 10px #00000050,
-                inset 4px 4px 10px rgba(97, 97, 97, 0.878),
-                inset -4px -4px 10px rgb(38, 38, 38);
+                inset 4px 4px 10px rgba(89, 89, 89, 0.878),
+                inset -4px -4px 10px rgb(48, 48, 48);
 }
 .sidebar__option:active {
     box-shadow: inset -4px -4px 10px #80808050,
