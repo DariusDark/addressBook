@@ -204,7 +204,6 @@ const toContact = (state, id) => {
 
 const addContact = (state) => {
     let { edit, contacts, perPage, currentElems, currentPage } = state;
-    console.log(uniqueId)
     const newContact = {
         ...edit,
         uniqueId: uniqueId++
