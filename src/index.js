@@ -8,7 +8,9 @@ import { Provider } from 'react-redux';
 import store from './store/Store.jsx';
 
 const TRACKING_ID = 'G-DZ2W3DE56N';
-ReactGA.initialize(TRACKING_ID);
+ReactGA.initialize(TRACKING_ID, {
+  testMode: true
+});
 ReactGA.send('pageview');
 
 ReactDOM.render(
